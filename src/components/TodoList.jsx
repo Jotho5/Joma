@@ -2,12 +2,18 @@ import React, { useState, useEffect } from 'react'
 import { RiAddFill } from 'react-icons/ri'
 import Todo from './dashboard/Todo'
 import { db } from '../firebase/firebase.js'
-import { query, collection, onSnapshot, QuerySnapshot, updateDoc, doc, addDoc, deleteDoc } from 'firebase/firestore'
+import { onAuthStateChanged } from 'firebase/auth'
+import { auth } from '../firebase/firebase'
+import { query, collection, onSnapshot, updateDoc, doc, addDoc, deleteDoc } from 'firebase/firestore'
+import { UserAuth } from '../context/AuthContext'
 
 const TodoList = () => {
 	const [todos, setTodos] = useState([])
 	const [input, setInput] = useState('')
 	//Function that creates the todo
+
+	const { user } = UserAuth()
+	const uid = user.uid
 
 	const createTodo = async (e) => {
 		e.preventDefault(e)
@@ -15,7 +21,7 @@ const TodoList = () => {
 			alert('Please enter a task')
 			return
 		}
-		await addDoc(collection(db, 'todos'), {
+		await addDoc(collection(db, uid), {
 			text: input,
 			completed: false,
 		})
@@ -24,28 +30,30 @@ const TodoList = () => {
 	}
 
 	//useEffect case that allows us to read the todos from the firebase database
+
 	useEffect(() => {
-		const path = query(collection(db, 'todos'))
-		const unsubscribe = onSnapshot(path, (QuerySnapshot) => {
-			let todosArr = []
-			QuerySnapshot.forEach((doc) => {
-				todosArr.push({ ...doc.data(), id: doc.id })
+		onAuthStateChanged(auth, (currentUser) => {
+			const path = query(collection(db, currentUser.uid))
+			const unsubscribe = onSnapshot(path, (QuerySnapshot) => {
+				let todosArr = []
+				QuerySnapshot.forEach((doc) => {
+					todosArr.push({ ...doc.data(), id: doc.id })
+				})
+				setTodos(todosArr)
 			})
-			setTodos(todosArr)
 		})
-		return () => unsubscribe()
 	}, [])
 
 	//Update todo in firebase
 	const toggleComplete = async (todo) => {
-		await updateDoc(doc(db, 'todos', todo.id), {
+		await updateDoc(doc(db, uid, todo.id), {
 			completed: !todo.completed,
 		})
 	}
 
 	// Delete todo from firebase
 	const deleteTodo = async (id) => {
-		await deleteDoc(doc(db, 'todos', id))
+		await deleteDoc(doc(db, uid, id))
 	}
 
 	return (

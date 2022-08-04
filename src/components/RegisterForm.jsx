@@ -20,7 +20,7 @@ const RegisterForm = () => {
 			navigate('/dashboard/account')
 		} catch (e) {
 			setError(e.message)
-			console.log(e.message)
+			alert(e.message)
 		}
 		setLoading(false)
 	}
