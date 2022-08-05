@@ -1,8 +1,6 @@
 import React from 'react'
 import ButtonCTA from '../components/ButtonCTA.jsx'
 import HomeImage from '../assets/landing-picture.svg'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import AOS from 'aos'
 
 import Navbar from '../components/Navbar'
 

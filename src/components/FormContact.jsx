@@ -27,7 +27,7 @@ const FormContact = () => {
 				console.log(error.text)
 			}
 		)
-		e.target.reset()
+
 		handleForm()
 		alert('Your message has been sent!')
 	}

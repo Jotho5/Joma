@@ -18,15 +18,12 @@ function App() {
 			<AuthContextProvider>
 				<BrowserRouter>
 					<Routes>
-						<Route path="" element={<Landing />} />
+						<Route path="/" element={<Landing />} />
 						<Route path="/login" element={<Login />} />
 						<Route path="/about" element={<About />} />
 						<Route path="/register" element={<Register />} />
 						<Route path="/contact" element={<Contact />} />
-					</Routes>
-				</BrowserRouter>
-				<BrowserRouter>
-					<Routes>
+
 						<Route
 							path="/dashboard"
 							element={
