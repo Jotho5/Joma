@@ -1,69 +1,77 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../assets/dashboard/dashLogo.png'
-import Calendar from '../assets/dashboard/Calendar.png'
-import Chart_fill from '../assets/dashboard/Chart_fill.png'
-import Chart from '../assets/dashboard/Chart.png'
-import Control from '../assets/dashboard/control.png'
-import Folder from '../assets/dashboard/Folder.png'
-import Search from '../assets/dashboard/Search.png'
-import Setting from '../assets/dashboard/Setting.png'
-import User from '../assets/dashboard/User.png'
+import { VscRocket } from 'react-icons/vsc'
+import { IoPersonCircle, IoChatbubbles } from 'react-icons/io5'
+import { BsFillHouseFill } from 'react-icons/bs'
+import { MdContacts } from 'react-icons/md'
+import control from '../assets/dashboard/control.png'
 
 const DashNavbar = (props) => {
 	const [open, setOpen] = useState(false)
-	const [task, setTask] = useState('')
 
 	const Style = {
-		list: 'flex rounded-md cursor-pointer hover:bg-light-white text-[#FFF] text-base items-center gap-x-4 border-b border-[#ffffff0e] mt-5',
-		span: `${!open && 'hidden'} origin-left duration-200`,
-		ul: `pt-20 flex flex-col gap-5 justify-between`,
+		list: 'flex rounded-md cursor-pointer hover:bg-light-white text-[#FFF] text-base items-center gap-x-4  mt-5',
+
+		ul: `mt-2 flex flex-col gap-5 justify-between`,
+		img: `cursor-pointer duration-1000 ${open && 'rotate-[360deg]'} mx-auto ${!open && 'h-10 duration-500 ease-in-out'}`,
+		h1: `text-white text-4xl text-center font-semibold duration-200  pt-10 relative bottom-8`,
+		p: `text-xs text-center relative bottom-7 text-white font-medium `,
+		span: `${!open && 'hidden'} duration-200`,
 	}
 
 	return (
-		<div className={` ${open ? 'w-72 ' : 'w-20 '} bg-[rgba(90,90,90,0.13)] border-r border-[#d6d6d656] h-screen p-5 relative duration-300 flex flex-col `}>
+		<div
+			className={` ${open ? 'w-72 ' : 'w-20 '} bg-[rgba(32,32,32,0.13)] border-r border-[#d6d6d62f] h-screen p-7 relative duration-300 flex flex-col ${
+				!open && 'place-items-center'
+			} `}
+		>
 			<img
-				src={Control}
-				className={`absolute cursor-pointer -right-3 top- w-7 border-[#0000000e]
+				alt="Spinner Icon"
+				src={control}
+				className={`absolute cursor-pointer -right-3 top- w-7 border-[#0000000e] 
            border-2 rounded-full  ${!open && 'rotate-180'}`}
 				onClick={() => setOpen(!open)}
 			/>
-			<div className="flex gap-x-4">
-				<img src={Logo} className={`cursor-pointer duration-500 ${open && 'rotate-[360deg]'} mx-auto`} />
-				<h1 className={`text-white origin-left font-medium text-xl duration-200 ${!open && 'scale-0'} pt-10`}></h1>
+			<div className={`grid pt-10 border-b border-[#ffffff15] ${!open && 'border-[#ffffff00] duration-150 ease-in-out'}`}>
+				<img alt="JomaLogo" src={Logo} className={Style.img} />
+				<div className={`${!open && 'scale-0 duration-150 ease-in-out'}`}>
+					<h1 className={Style.h1}>Joma</h1>
+					<p className={Style.p}>Tracking made easy</p>
+				</div>
 			</div>
-			<div className="grid justify-between mt-5">
+			<div className={`grid justify-between  ${!open && 'duration-150 ease-in-out'}`}>
 				<ul className={Style.ul}>
 					<Link to="/dashboard">
-						<li className={`${Style.list}  `}>
-							<img src={Calendar} alt="Calendar" />
-							<span className={`${!open && 'hidden'} origin-left duration-200 ${props.dashboard || ''}`}>Dashboard</span>
+						<li className={`${Style.list}`}>
+							<VscRocket size={25} alt="Dashboard" />
+							<span className={`${Style.span} ${props.dashboard || ''}`}>Dashboard</span>
 						</li>
 					</Link>
 					<Link to="/dashboard/account">
 						<li className={Style.list}>
-							<img src={User} alt="Setting" />
-							<span className={`${!open && 'hidden'} origin-left duration-200 ${props.profile || ''}`}>Profile</span>
+							<IoPersonCircle size={25} alt="Profile" />
+							<span className={`${Style.span} ${props.profile || ''}`}>Profile</span>
 						</li>
 					</Link>
 
 					<Link to="/">
 						<li className={Style.list}>
-							<img src={Calendar} alt="Calendar" />
-							<span className={`${!open && 'hidden'} origin-left duration-200`}>Home</span>
+							<BsFillHouseFill size={25} alt="Home" />
+							<span className={`${Style.span} duration-200`}>Home</span>
 						</li>
 					</Link>
 
 					<Link to="/about">
 						<li className={Style.list}>
-							<img src={Calendar} alt="Calendar" />
-							<span className={`${!open && 'hidden'} origin-left duration-200`}>About </span>
+							<IoChatbubbles size={25} alt="About" />
+							<span className={`${Style.span} duration-200`}>About </span>
 						</li>
 					</Link>
 					<Link to="/contact">
 						<li className={Style.list}>
-							<img src={Calendar} alt="Calendar" />
-							<span className={`${!open && 'hidden'} origin-left duration-200`}>Contact</span>
+							<MdContacts size={25} alt="Contact" />
+							<span className={`${Style.span} duration-200`}>Contact</span>
 						</li>
 					</Link>
 				</ul>
