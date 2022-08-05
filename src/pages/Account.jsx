@@ -19,7 +19,7 @@ const Account = () => {
 	}
 
 	return (
-		<div className="flex h-screen w-full bg-gradient-to-br from-[#A9A9A9] to-[#3860A4]">
+		<div className="flex h-screen w-full ">
 			<DashNavbar profile="font-bold" />
 			<div className="h-screen flex-1 p-7 place-items-center">
 				<h1 className="text-2xl font-semibold text-[#ffffff] pb-2 mb-4 border-b">Account</h1>
@@ -43,7 +43,7 @@ const Account = () => {
 							data-aos-delay="400"
 							data-aos-duration="1200"
 							onClick={handleLogout}
-							className="border px-4 bg-indigo-500 text-slate-100"
+							className="border px-5 bg-blue-600 text-slate-100"
 						>
 							<MdOutlineLogout size={15} color="white" />
 						</button>

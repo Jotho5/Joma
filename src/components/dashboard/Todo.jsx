@@ -8,7 +8,7 @@ const Todo = ({ todo, toggleComplete, deleteTodo }) => {
 	}
 
 	return (
-		<li className={todo.completed ? Styling.liComplete : 'flex justify-between bg-slate-200 p-4 my-2 capitalize duration-500 ease-in-out  '}>
+		<li className={todo.completed ? Styling.liComplete : 'flex justify-between bg-[#ffffff6b] p-4 my-2 capitalize duration-500 ease-in-out custom-radius '}>
 			<div className="flex">
 				<input onChange={() => toggleComplete(todo)} type="checkbox" checked={todo.completed ? 'checked' : ''} className="rounded-full" />
 

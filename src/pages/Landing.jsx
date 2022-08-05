@@ -18,9 +18,9 @@ const landing = () => {
 							data-aos-duration="800"
 							data-aos-once="true"
 							data-aos-delay="1300"
-							className="bubble rounded-lg bg-[#55adf5] mx-auto w-[200px] flex justify-center place-items-center md:ml-[1px] "
+							className="bubble custom-radius bg-[#2483d17a] mx-auto w-[200px] flex justify-center place-items-center md:ml-[1px] "
 						>
-							<p className="text-[#FFF] font-semibold px-1 py-1.5 text-center text-sm">No Credit Card Needed</p>
+							<p className="text-[#FFF]  px-1 py-1.5 text-center text-sm">No Credit Card Needed</p>
 						</div>
 
 						<div data-aos="fade-up-right" data-aos-duration="800" data-aos-once="true" className="flex flex-col gap-5 mx-auto text-center mb-4 md:text-left">

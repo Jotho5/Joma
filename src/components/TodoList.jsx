@@ -60,20 +60,27 @@ const TodoList = () => {
 		<div
 			data-aos="fade-down"
 			data-aos-duration="1000"
-			className="flex flex-col gap-2 bg-[#ffffff4b] w-full m-auto rounded-sm border border-[#ffffff4b] shadow-xl p-4"
+			className="flex flex-col gap-2 bg-[#ffffff3d] w-full m-auto rounded-sm border border-[#ffffff4b] shadow-xl p-4"
 		>
-			<h3 data-aos="fade-in" data-aos-delay="400" data-aos-duration="800" className="text-3xl font-semibold text-left text-[#ffffff] p-2">
-				Task Creator
-			</h3>
+			<div className="flex">
+				<h3 data-aos="fade-in" data-aos-delay="400" data-aos-duration="800" className="text-3xl font-regular text-left text-[#ffffff] p-2">
+					Task Creator
+				</h3>
+			</div>
 			<form data-aos="fade-in" data-aos-duration="1000" onSubmit={createTodo} className="flex justify-between px-1">
 				<input
 					value={input}
 					onChange={(e) => setInput(e.target.value)}
-					className="border p-3 w-full text-lg outline-none bg-[#ffffffb9] placeholder:text-[#c0bdbdcc] placeholder:font-normal"
+					className="border border-[#ffffff91] p-3 w-full text-lg outline-none text-white bg-[#ffffff3d] placeholder:text-[#f8f8f8cc] placeholder:font-normal"
 					type="text"
 					placeholder="Add Task"
 				/>
-				<button data-aos="fade-left" data-aos-delay="400" data-aos-duration="1200" className="border p-4 bg-indigo-500 text-slate-100">
+				<button
+					data-aos="fade-left"
+					data-aos-delay="400"
+					data-aos-duration="1200"
+					className="border border-[#ffffff91] p-4 bg-[#3b5fad] outline-none text-slate-100"
+				>
 					<RiAddFill color="white" size={25} />
 				</button>
 			</form>

@@ -21,7 +21,7 @@ const DashNavbar = (props) => {
 	}
 
 	return (
-		<div className={` ${open ? 'w-72 ' : 'w-20 '} bg-[rgba(90,90,90,0.13)] border-r border-[#d6d6d6] h-screen p-5 relative duration-300 flex flex-col `}>
+		<div className={` ${open ? 'w-72 ' : 'w-20 '} bg-[rgba(90,90,90,0.13)] border-r border-[#d6d6d656] h-screen p-5 relative duration-300 flex flex-col `}>
 			<img
 				src={Control}
 				className={`absolute cursor-pointer -right-3 top- w-7 border-[#0000000e]
@@ -35,7 +35,7 @@ const DashNavbar = (props) => {
 			<div className="grid justify-between mt-5">
 				<ul className={Style.ul}>
 					<Link to="/dashboard">
-						<li className={Style.list}>
+						<li className={`${Style.list}  `}>
 							<img src={Calendar} alt="Calendar" />
 							<span className={`${!open && 'hidden'} origin-left duration-200 ${props.dashboard || ''}`}>Dashboard</span>
 						</li>
@@ -47,7 +47,7 @@ const DashNavbar = (props) => {
 						</li>
 					</Link>
 
-					<Link to="">
+					<Link to="/">
 						<li className={Style.list}>
 							<img src={Calendar} alt="Calendar" />
 							<span className={`${!open && 'hidden'} origin-left duration-200`}>Home</span>
