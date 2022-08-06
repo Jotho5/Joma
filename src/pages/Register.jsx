@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import RegisterForm from '../components/RegisterForm'
+import RegisterForm from '../components/FormSignup'
 import TodoImage from '../assets/todo-image.svg'
 import Navbar from '../components/Navbar'
 

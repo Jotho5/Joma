@@ -8,11 +8,11 @@ const Todo = ({ todo, toggleComplete, deleteTodo }) => {
 	}
 
 	return (
-		<li className={todo.completed ? Styling.liComplete : 'flex justify-between bg-[#ffffff6b] p-4 my-2 capitalize duration-500 ease-in-out custom-radius '}>
+		<li className={todo.completed ? Styling.liComplete : 'flex justify-between bg-[#ffffff34] p-4 my-2 capitalize duration-500 ease-in-out custom-radius '}>
 			<div className="flex">
 				<input onChange={() => toggleComplete(todo)} type="checkbox" checked={todo.completed ? 'checked' : ''} className="rounded-full" />
 
-				<div onClick={() => toggleComplete(todo)} className={todo.completed ? Styling.textComplete : 'ml-2 cursor-pointer duration-500 ease-in-out'}>
+				<div onClick={() => toggleComplete(todo)} className={todo.completed ? Styling.textComplete : 'ml-2 cursor-pointer duration-500 ease-in-out text-white'}>
 					<p className="break-all">{todo.text}</p>
 				</div>
 			</div>

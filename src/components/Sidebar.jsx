@@ -22,7 +22,7 @@ const DashNavbar = (props) => {
 
 	return (
 		<div
-			className={` ${open ? 'w-72 ' : 'w-20 '} bg-[rgba(32,32,32,0.13)] border-r border-[#d6d6d62f] h-screen p-7 relative duration-300 flex flex-col ${
+			className={` ${open ? 'w-72 ' : 'w-20 '} bg-[rgba(32,32,32,0.13)] border-r border-[#d6d6d62f]  p-7 relative duration-300 flex flex-col ${
 				!open && 'place-items-center'
 			} `}
 		>

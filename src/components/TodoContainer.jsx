@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useContext, createContext } from 'react'
 import { RiAddFill } from 'react-icons/ri'
-import Todo from './dashboard/Todo'
+import Todo from './dashboard/TodoList'
 import { db } from '../firebase/firebase.js'
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from '../firebase/firebase'
 import { query, collection, onSnapshot, updateDoc, doc, addDoc, deleteDoc, orderBy, where, getDoc } from 'firebase/firestore'
 import { UserAuth } from '../context/AuthContext'
-import StatCard from './StatCard'
+import StatCard from './Statistics'
 
 const TodoContext = createContext()
 
