@@ -7,6 +7,7 @@ const RegisterForm = () => {
 	const [loading, setLoading] = useState(false)
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
+	const [name, setName] = useState('')
 	const [error, setError] = useState('')
 	const { createUser } = UserAuth()
 	const navigate = useNavigate()
@@ -28,6 +29,7 @@ const RegisterForm = () => {
 		<div>
 			<form onSubmit={handleSubmit} className="grid gap-6 sm:w-[500px] lg:grid-cols-2">
 				<input className={`${inputStyles} lg:col-span-2`} type={'name'} placeholder={'Full name'} required={true} />
+
 				<input
 					id="email"
 					className={`${inputStyles} lg:col-span-2`}

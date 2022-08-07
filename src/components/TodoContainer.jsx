@@ -43,6 +43,7 @@ const TodoList = () => {
 			head: inputTitle,
 			text: input,
 			completed: false,
+			editted: false,
 		})
 		setInputTitle('')
 		setInput('')
@@ -76,6 +77,7 @@ const TodoList = () => {
 		await updateDoc(doc(db, `${uid}`, openModal.id), {
 			head: editTitle,
 			text: editText,
+			editted: true,
 		})
 		console.log(openModal)
 
@@ -124,11 +126,10 @@ const TodoList = () => {
 							</Button>
 						</button>
 					</div>
-					<DatePicker defaultValue={Date} value={userDate} onChange={(e) => setDate(e)} placeholder="Due Date" required />
 				</form>
 			</Modal>
 
-			{/* TESTING */}
+			{/* update modal */}
 			<Modal size={700} opened={openModal ? true : false} centered={true} onClose={() => setOpenModal(false)} title="Edit Your Task">
 				<form onSubmit={updateTodo} className="flex flex-col justify-between p-1">
 					<input
@@ -157,7 +158,6 @@ const TodoList = () => {
 							<Button className="bg-[#332e75] border border-[#ffffff25] duration-500 p-3">Edit Task</Button>
 						</button>
 					</div>
-					<DatePicker defaultValue={Date} value={userDate} onChange={(e) => setDate(e)} placeholder="Due Date" required />
 				</form>
 			</Modal>
 
@@ -188,7 +188,7 @@ const TodoList = () => {
 
 								<div onClick={() => toggleComplete(todo)} className={todo.completed ? Styling.textComplete : 'ml-2 cursor-pointer duration-500 ease-in-out'}>
 									<h1 className="break-all text-[#ebeaee] font-bold border-[#ffffff38] leading-loose capitalize">{todo.head}</h1>
-									<p className="first-letter:capitalize break-all md:pl-1 text-[#ebeaee]">{todo.text}</p>
+									<p className="first-letter:capitalize break-all  text-[#ebeaee]">{todo.text}</p>
 								</div>
 							</div>
 							<div className="flex gap-2">

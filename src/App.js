@@ -10,6 +10,7 @@ import { AuthContextProvider } from './context/AuthContext'
 import ProtectedRoute from './context/ProtectedRoutes'
 import Account from './pages/Account'
 import Footer from './components/Footer'
+import Test from './pages/Test'
 
 function App() {
 	return (
@@ -27,6 +28,15 @@ function App() {
 						element={
 							<ProtectedRoute>
 								<Dashboard />
+							</ProtectedRoute>
+						}
+						exact
+					/>
+					<Route
+						path="/dashboard/test"
+						element={
+							<ProtectedRoute>
+								<Test />
 							</ProtectedRoute>
 						}
 						exact

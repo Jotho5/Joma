@@ -72,7 +72,7 @@ const Navbar = () => {
 					<li className={!user ? myStyling.list : 'hidden'}>Sign Up</li>
 				</Link>
 				<Link to="/dashboard">
-					<li className={user ? myStyling.list : 'hidden'}>Dashboard</li>
+					<li className={user ? myStyling.list : 'hidden '}>Dashboard</li>
 				</Link>
 			</ul>
 
