@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Logo from '../assets/joma-logo.svg'
 import { Link } from 'react-router-dom'
-import { Rotate as Hamburger } from 'hamburger-react'
+import { Sling as Hamburger } from 'hamburger-react'
 
 import { UserAuth } from '../context/AuthContext'
 

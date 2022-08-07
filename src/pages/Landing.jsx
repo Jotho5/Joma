@@ -15,7 +15,7 @@ const landing = () => {
 						data-aos-duration="800"
 						data-aos-once="true"
 						data-aos-delay="1300"
-						className="custom-radius bg-[#345B92] mx-auto w-[200px] flex justify-center place-items-center md:ml-[1px] "
+						className="custom-radius bg-[#3588F3] mx-auto w-[200px] flex justify-center place-items-center md:ml-[1px] "
 					>
 						<p className="text-[#f6f6fa] font-semibold px-1 py-1.5 text-center text-sm">No Credit Card Needed</p>
 					</div>

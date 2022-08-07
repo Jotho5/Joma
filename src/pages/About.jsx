@@ -9,7 +9,7 @@ import Timeline from '../components/Timeline'
 
 const about = () => {
 	return (
-		<div className="bg-gradient-to-br from-[#242525] to-[#3b63a8]">
+		<div className="bg-gradient-to-br from-[#7b9099] to-[#1b5fd4]">
 			<div className="max-w-[1400px] mx-auto ">
 				<Navbar />
 				<div className="py-12">

@@ -3,7 +3,8 @@ import emailjs from '@emailjs/browser'
 
 const FormContact = () => {
 	const style = {
-		input: 'p-3 bg-[#d9d9d90e] border border-[#ffffff5d] text-[#DDDDDD] text-sm outline-none custom-radius focus:border-[#ffffffb9] duration-500 ease-in-out',
+		input:
+			'p-3 bg-[#d9d9d90e] border border-[#ffffff5d] text-[#FFF] text-sm outline-none custom-radius focus:border-[#ffffffb9] duration-500 ease-in-out placeholder:text-white',
 		button:
 			'py-3 px-2 bg-[#345B92] hover:bg-[#4070B5] text-white border border-[#fdfdfd50] font-medium custom-radius contact-btn-backdrop max-w-[250px] duration-500',
 		form: 'grid grid-cols-1 gap-5 p-5 sm:grid-cols-2 ',
@@ -33,7 +34,7 @@ const FormContact = () => {
 	}
 
 	return (
-		<div className="bg-[#596f925d] border border-[#ffffff38] custom-radius sm:max-w-[700px] mx-auto">
+		<div className="bg-[#45669b5d] border border-[#ffffff38] custom-radius sm:max-w-[700px] mx-auto">
 			<form ref={form} data-aos="fade" data-aos-duration="800" data-aos-delay="600" className={style.form} onSubmit={sendEmail}>
 				<input name="name" disabled={formBox} data-aos="fade" className={`${style.input} `} placeholder="Full Name" type="text" required={true} />
 				<input name="email" disabled={formBox} data-aos="fade" className={`${style.input}`} placeholder="Email Address" type="email" required={true} />
