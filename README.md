@@ -1,10 +1,10 @@
 # Joma Task Tracker 📝 
 Joma is a web-based application for all of your task tracking needs. With Joma, you have the ability of tracking your tasks, editing and removing them. Joma is equipped with a database and user authentication. Create an account and begin tracking today!
 
-# Demo 🚀
-Check it out here! In case you don't want to go through the process of creating an account, I have a test account available for you! 👇
+# [Demo]() 🚀
+Check it out [here]()! In case you don't want to go through the process of creating an account, I have a test account available for you! 👇
 
-Username
+Username\
 Password
 
 ## ✨ Features ✨
