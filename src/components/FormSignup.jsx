@@ -7,7 +7,6 @@ const RegisterForm = () => {
 	const [loading, setLoading] = useState(false)
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
-	const [name, setName] = useState('')
 	const [error, setError] = useState('')
 	const { createUser } = UserAuth()
 	const navigate = useNavigate()
@@ -18,7 +17,7 @@ const RegisterForm = () => {
 		setLoading(true)
 		try {
 			await createUser(email, password)
-			navigate('/dashboard/account')
+			navigate('/dashboard')
 		} catch (e) {
 			setError(e.message)
 			alert(e.message)

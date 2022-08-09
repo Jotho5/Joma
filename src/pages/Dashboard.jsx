@@ -236,7 +236,6 @@ const Dashboard = (props) => {
 								<Button onClick={() => setOpened(false)} className=" border border-[#0202035b] duration-500 p-3  text-[#686868]  hover:bg-[#00000028] ">
 									Cancel
 								</Button>
-
 								<button>
 									<Button className="bg-[#186ABD] border border-[#ffffff25] duration-500 p-3" onClick={() => setOpened(false)}>
 										Add Task
