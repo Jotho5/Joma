@@ -7,7 +7,7 @@ const Contact = () => {
 		<div className="max-w-[1400px] mx-auto">
 			<Navbar />
 
-			<div className="px-8 mt-8 md:my-10">
+			<div className="px-8 mt-10 md:my-20">
 				<div className="grid gap-7 ">
 					<div className="headline text-white mx-auto text-center">
 						<h1 data-aos="fade" data-aos-duration="500" className="text-xl mb-2 sm:text-3xl md:text-4xl font-light">

@@ -7,9 +7,9 @@ import Footer from '../components/Footer'
 
 const landing = () => {
 	return (
-		<div className="max-w-[1400px] mx-auto px-8">
+		<div className="max-w-[1400px] mx-auto">
 			<Navbar />
-			<div className="grid md:grid-cols-2 gap-5 py-12 mb-24 ">
+			<div className="grid md:grid-cols-2 gap-5 py-12 mb-28 px-8">
 				<div className="grid gap-5 md:flex md:flex-col md:gap-8 md:mt-10 px-4 justify-center">
 					<div
 						data-aos="fade-left"
