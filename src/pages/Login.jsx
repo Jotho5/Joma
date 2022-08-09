@@ -9,7 +9,11 @@ const Login = () => {
 	return (
 		<div>
 			<Navbar />
+<<<<<<< HEAD
 			<div className="max-w-[1280px] mx-auto py-20 mb-16 md:mb-32">
+=======
+			<div className="max-w-[1280px] mx-auto py-20 mb-28 md:mb-32">
+>>>>>>> c8ac4f0d6b77357d9bd0f4fcc8fcfeb696d6606f
 				<div className="grid place-content-center">
 					<div data-aos="fade-in" data-aos-duration="800" data-aos-once="true" className="grid justify-center place-items-center place-self-center">
 						<img src={Logo} className="w-[80px] rounded-lg" alt="Company Logo" />
