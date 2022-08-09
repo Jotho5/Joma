@@ -47,7 +47,7 @@ const FormContact = () => {
 					type="text"
 					required={true}
 				/>
-				<button disabled={formBox} data-aos="fade-right" data-aos-duration="1000" data-aos-delay="1200" className={`${style.button} `}>
+				<button disabled={formBox} data-aos="fade-right" data-aos-once={true} data-aos-duration="1000" data-aos-delay="1200" className={`${style.button} `}>
 					{formBox ? 'Message Sent' : 'Send Message'}
 				</button>
 			</form>
