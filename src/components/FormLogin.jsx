@@ -19,7 +19,7 @@ const LoginForm = () => {
 			return
 		} catch (e) {
 			setError(e.message)
-			console.log(e.message)
+			alert(e.message)
 			return
 		}
 	}
