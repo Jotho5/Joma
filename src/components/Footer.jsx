@@ -4,7 +4,9 @@ const Footer = () => {
 	return (
 		<div className=" text-center px-10 ">
 			<div className="border-t p-3 border-[#ffffff21] mx-3 "></div>
-			<p className="text-[#ffffff] text-base font-light hover:animate-pulse cursor-pointer tracking-wider">Copyright © John Thomas</p>
+			<a href="https://jothocodes.com" target="_blank" className="text-[#ffffff] text-base font-light hover:animate-pulse cursor-pointer tracking-wider">
+				Copyright © John Thomas
+			</a>
 			<br />
 		</div>
 	)
