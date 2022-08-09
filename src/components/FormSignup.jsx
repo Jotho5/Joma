@@ -18,7 +18,7 @@ const RegisterForm = () => {
 		setLoading(true)
 		try {
 			await createUser(email, password)
-			navigate('/dashboard/account')
+			navigate('/dashboard')
 		} catch (e) {
 			setError(e.message)
 			alert(e.message)
