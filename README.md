@@ -27,10 +27,10 @@ Password: Test123
 ## Main Features 🔥
 #### Authentication
 * Sign In and/or Register with email & password
-#### Protected Routes
+#### Form Validation
 * Email Validation
 * No Empty Fields
-#### Form Validation
+#### Protected Routes 
 * Redirects users if they try accessing routes that require authentication
 #### Database
 * User Accounts
