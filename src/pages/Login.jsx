@@ -1,16 +1,18 @@
 import React from 'react'
 import LoginForm from '../components/FormLogin'
-import Logo from '../assets/Logo.svg'
+import Logo from '../assets/dashboard/joma-logo.png'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
 	return (
 		<div>
 			<Navbar />
-			<div className="max-w-[1280px] mx-auto z-0 my-10 xl:my-32  md:my-5 px-4 md:px-2 md:py-5 md:mt-20">
+			<div className="max-w-[1280px] mx-auto py-20 md:mb-32">
 				<div className="grid place-content-center">
 					<div data-aos="fade-in" data-aos-duration="800" data-aos-once="true" className="grid justify-center place-items-center place-self-center">
-						<img src={Logo} className="w-[100px]" alt="Company Logo" />
+						<img src={Logo} className="w-[80px] rounded-lg" alt="Company Logo" />
 					</div>
 
 					<div data-aos="fade-right" data-aos-duration="800" data-aos-once="true" data-aos-delay="500" className="text-[#FFF] text-center mb-8 mt-8">
@@ -22,13 +24,15 @@ const Login = () => {
 						<LoginForm />
 						<p className="text-white mt-4 font-light">
 							Dont have an account?{' '}
-							<a href="#">
+							<Link to="/register">
 								<span className="text-[#ffffff] font-medium">Get Started</span>
-							</a>
+							</Link>
 						</p>
 					</div>
 				</div>
 			</div>
+
+			<Footer />
 		</div>
 	)
 }

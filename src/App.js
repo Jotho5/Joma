@@ -8,9 +8,6 @@ import Contact from './pages/Contact'
 import Dashboard from './pages/Dashboard'
 import { AuthContextProvider } from './context/AuthContext'
 import ProtectedRoute from './context/ProtectedRoutes'
-import Account from './pages/Account'
-import Footer from './components/Footer'
-import Test from './pages/Test'
 
 function App() {
 	return (
@@ -32,27 +29,8 @@ function App() {
 						}
 						exact
 					/>
-					<Route
-						path="/dashboard/test"
-						element={
-							<ProtectedRoute>
-								<Test />
-							</ProtectedRoute>
-						}
-						exact
-					/>
-
-					<Route
-						path="/dashboard/account"
-						element={
-							<ProtectedRoute>
-								<Account />
-							</ProtectedRoute>
-						}
-					/>
 				</Routes>
 			</BrowserRouter>
-			<Footer data-aos="fade" data-aos-duration="800" data-aos-delay="1000" />
 		</AuthContextProvider>
 	)
 }

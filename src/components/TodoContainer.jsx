@@ -7,7 +7,6 @@ import { query, collection, onSnapshot, updateDoc, doc, addDoc, deleteDoc } from
 import { UserAuth } from '../context/AuthContext'
 import StatCard from './Statistics'
 import { Modal, Button, Group } from '@mantine/core'
-import { DatePicker } from '@mantine/dates'
 import { FaRegTrashAlt } from 'react-icons/fa'
 import { BsPencil } from 'react-icons/bs'
 

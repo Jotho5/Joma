@@ -1,13 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import RegisterForm from '../components/FormSignup'
 import TodoImage from '../assets/todo-image.svg'
 import Navbar from '../components/Navbar'
+import { Link } from 'react-router-dom'
+import Footer from '../components/Footer'
 
 const Register = () => {
 	return (
 		<div>
 			<Navbar />
-			<div className="max-w-[1400px] mx-auto z-0 my-10 px-6 md:px-2  md:mt-20">
+			<div className="max-w-[1400px] mx-auto my-10 px-6 md:px-2 md:my-20">
 				<div className="grid gap-20 px-4 lg:flex place-items-center">
 					<div>
 						<h1
@@ -34,18 +36,19 @@ const Register = () => {
 
 							<p className="text-white pt-6 font-light">
 								Already have an account?{' '}
-								<a href="#">
+								<Link to="/login">
 									<span className="text-[#ffffff] font-medium">Sign In</span>
-								</a>
+								</Link>
 							</p>
 						</div>
 					</div>
 
 					<div data-aos="fade-down-left" data-aos-duration="800" data-aos-once="true" data-aos-delay="1200" className="flex place-items-start mx-auto">
-						<img className="max-h-[600px] grid" src={TodoImage} alt="signup image" />
+						<img className="max-h-[600px] grid" src={TodoImage} alt="signup" />
 					</div>
 				</div>
 			</div>
+			<Footer />
 		</div>
 	)
 }

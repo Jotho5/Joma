@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import Logo from '../assets/joma-logo.svg'
+import Logo from '../assets/joma.svg'
 import { Link } from 'react-router-dom'
 import { Sling as Hamburger } from 'hamburger-react'
 
@@ -46,10 +46,10 @@ const Navbar = () => {
 	}
 
 	return (
-		<div ref={menuRef} className="flex justify-between items-center h-24 max-w-[1400px] mx-auto px-4 text-poppins ">
+		<div ref={menuRef} className="flex justify-between items-center h-24 max-w-[1400px] mx-auto px-8 text-poppins ">
 			{/* Regular Navigation */}
 			<Link to="/">
-				<img alt="logo" src={Logo} className=" h-10" />
+				<img alt="logo" src={Logo} className=" h-8" />
 			</Link>
 			<ul className="hidden lg:flex">
 				<Link to="/">

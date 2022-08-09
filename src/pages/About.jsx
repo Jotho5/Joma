@@ -6,11 +6,12 @@ import { IoLogoReact, IoLogoFirebase } from 'react-icons/io5'
 import { FiFigma } from 'react-icons/fi'
 import { SiTailwindcss } from 'react-icons/si'
 import Timeline from '../components/Timeline'
+import Footer from '../components/Footer'
 
 const about = () => {
 	return (
 		<div className="bg-gradient-to-br from-[#7b9099] to-[#1b5fd4]">
-			<div className="max-w-[1400px] mx-auto ">
+			<div className="max-w-[1400px] mx-auto px-8">
 				<Navbar />
 				<div className="py-12">
 					<div className="grid gap-5 ">
@@ -87,6 +88,7 @@ const about = () => {
 					</div>
 				</div>
 			</div>
+			<Footer />
 		</div>
 	)
 }
