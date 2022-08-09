@@ -24,7 +24,7 @@ Password
 • Netlify for hosting
 • EmailJS for the contact page
 
-#Main Features 🔥
+# Main Features 🔥
 Authentication
 • Sign In and/or Register with email & password
 
