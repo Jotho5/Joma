@@ -1,7 +1,7 @@
 import React from 'react'
 import ButtonCTA from '../components/ButtonCTA.jsx'
 import HomeImage from '../assets/landing-picture.svg'
-
+import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 
@@ -30,7 +30,9 @@ const landing = () => {
 					</div>
 
 					<div data-aos="fade-up-left" data-aos-duration="800" data-aos-once="true" className="mx-auto place-items-center grid md:mx-0 md:place-items-start">
-						<ButtonCTA />
+						<Link to="/register">
+							<ButtonCTA />
+						</Link>
 					</div>
 				</div>
 				<div data-aos="flip-up" data-aos-duration="800" data-aos-delay="800" data-aos-once="true" className="mx-auto place-items-center justify-center grid ">
