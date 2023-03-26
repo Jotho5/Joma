@@ -41,7 +41,7 @@ const Dashboard = (props) => {
 	const Styling = {
 		liComplete: `flex justify-between bg-[#555558] p-4 my-2 capitalize duration-500 ease-in-out`,
 		textComplete: `ml-2 cursor-pointer line-through duration-500 ease-in-out`,
-		dashList: 'flex gap-3 text-[#ffffff] align-center place-items-center duration-500 p-2 hover:bg-[#00000021] rounded-md',
+		dashList: 'flex gap-3 text-[#000]  align-center place-items-center duration-500 p-2 hover:bg-[#00000021] rounded-md',
 	}
 
 	const createTodo = async (e) => {
@@ -121,7 +121,7 @@ const Dashboard = (props) => {
 			<AppShell
 				styles={{
 					main: {
-						background: '#E3EBFF',
+						background: '#FAFAFA',
 					},
 				}}
 				navbarOffsetBreakpoint="sm"
@@ -130,7 +130,7 @@ const Dashboard = (props) => {
 					<Navbar
 						data-aos="fade-up-right"
 						data-aos-duration="500"
-						className="bg-[#38434E] border-r border-[#333]"
+						className="bg-[#FBFEFF] border-r border-[#E4E4E4]"
 						p="md"
 						hiddenBreakpoint="sm"
 						hidden={!opened2}
@@ -138,17 +138,17 @@ const Dashboard = (props) => {
 					>
 						<Navbar.Section className="flex gap-5 place-items-center border-b pb-3 p-2 border-[#ffffff18]">
 							<img src={Logo} alt="Logo" className="h-5 rounded-md" />
-							<h1 className="text-[#ffffffd3] text-xl font-medium">Joma</h1>
+							<h1 className="text-[#000000] text-xl font-medium">Joma</h1>
 						</Navbar.Section>
 						<Navbar.Section grow mt="md">
 							<ul className="grid gap-4">
 								<Link to="/dashboard">
-									<li className={`${Styling.dashList} bg-slate-500`}>
+									<li className={`${Styling.dashList} bg-[#0000000f]`}>
 										{' '}
-										<ThemeIcon size="md" variant="gradient" gradient={{ from: 'indigo', to: 'cyan' }}>
+										<ThemeIcon size="md" variant="gradient" color="#000000">
 											<AiOutlineRocket size={15} />
 										</ThemeIcon>
-										<p>Dashboard</p>
+										<p className="font-medium">Dashboard</p>
 									</li>
 								</Link>
 								<Link to="/">
@@ -181,13 +181,13 @@ const Dashboard = (props) => {
 							</ul>
 						</Navbar.Section>
 						<Navbar.Section>
-							<ul className="border-t pt-3 border-[#ffffff1c]">
-								<li className="flex gap-3 text-[#ccc] place-items-center hover:bg-[#ffffff18] rounded-md p-2 duration-200 ease-in-out">
+							<ul className="border-t pt-3 border-[#0000001f]">
+								<li className="flex gap-3 place-items-center hover:bg-[#ffffff18] rounded-md p-2 duration-200 ease-in-out">
 									{' '}
 									<ThemeIcon size="md" variant="gradient" gradient={{ from: 'indigo', to: 'cyan' }}>
 										<IoExitOutline size={15} />
 									</ThemeIcon>
-									<p onClick={handleLogout} className="text-[#FFF] text-md break-all hover:cursor-pointer">
+									<p onClick={handleLogout} className=" text-md font-medium break-all hover:cursor-pointer">
 										Logout
 									</p>
 								</li>
@@ -196,13 +196,13 @@ const Dashboard = (props) => {
 					</Navbar>
 				}
 				header={
-					<Header data-aos="fade-left" data-aos-duration="300" className="bg-[#38434E] border-b border-[#ffffff23]" height={70} p="md">
+					<Header data-aos="fade-left" data-aos-duration="300" className="bg-[#FBFEFF] border-b border-[#E4E4E4]" height={70} p="md">
 						<div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
 							<MediaQuery largerThan="sm" styles={{ display: 'none' }}>
 								<Burger opened={opened2} onClick={() => setopened2((o) => !o)} size="sm" color={theme.colors.gray[6]} mr="xl" />
 							</MediaQuery>
 
-							<Text className="text-[#FFF] md:text-2xl font-light">Dashboard</Text>
+							<Text className="text-[#000] md:text-2xl">Dashboard</Text>
 						</div>
 					</Header>
 				}
@@ -277,7 +277,7 @@ const Dashboard = (props) => {
 						</form>
 					</Modal>
 
-					<div data-aos="fade" data-aos-duration="500" className="flex flex-col gap-2 bg-[#38434E] w-full m-auto shadow-xl p-4 rounded-md">
+					<div data-aos="fade" data-aos-duration="500" className="flex flex-col gap-2 bg-[#FBFEFF] w-full m-auto shadow-xl p-4 rounded-md">
 						<div className="flex gap-2 justify-between">
 							<div className="flex">
 								<h3 data-aos="fade-in" data-aos-delay="400" data-aos-duration="800" className=" text-lg md:text-xl font-light text-left text-[#ffffff] p-2">
@@ -286,7 +286,7 @@ const Dashboard = (props) => {
 							</div>
 
 							<Group className="outline-none">
-								<Button className="bg-[#0202035b] border border-[#ffffffbe] duration-500 p-3 outline-none" onClick={() => setOpened(true)}>
+								<Button className="bg-[#5b95f9] border border-[#ffffffbe] duration-500 p-3 outline-none" onClick={() => setOpened(true)}>
 									<RiAddFill color="#FFF" />
 								</Button>
 							</Group>
