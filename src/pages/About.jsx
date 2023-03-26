@@ -9,86 +9,90 @@ import Timeline from '../components/Timeline'
 import Footer from '../components/Footer'
 
 const about = () => {
-	return (
-		<div className="bg-gradient-to-br from-[#7b9099] to-[#1b5fd4]">
-			<div className="max-w-[1400px] mx-auto px-8">
-				<Navbar />
-				<div className="py-12">
-					<div className="grid gap-5 ">
-						<div className="headline text-white mx-auto text-center">
-							<h1 data-aos="fade" data-aos-duration="500" className="text-2xl mb-2 sm:text-3xl md:text-4xl font-light">
-								The Development of Joma
-							</h1>
-							<p data-aos="fade-right" data-aos-delay="500" data-aos-duration="500" className="font-light text-sm md:text-base">
-								Front row seats of the Joma's development.
-							</p>
-						</div>
+	//an array of objects to store props for Timeline components
+	const timelineData = [
+		{
+			title: 'UI/UX Design',
+			text: 'At the initial stage, the Joma web applications template was developed using Figma, with the theme and design created from scratch',
+			icon: <FiFigma />,
+			date: 'August 1st',
+		},
+		{
+			title: 'Project Environment',
+			text: 'To streamline the development process, ReactJS and Tailwind CSS were utilized as the CSS framework for the Joma project.',
+			icon: <SiTailwindcss />,
+			position: 'right',
+			date: 'August 2nd',
+		},
+		{
+			title: 'Frontend Development',
+			text: 'The frontend was given top priority in the fullstack application development process. The main pages of the website were created with a focus on ensuring they were mobile-friendly. Following this, the dashboard and associated pages were built from scratch.',
+			icon: <IoLogoReact />,
+			date: 'August 2nd',
+		},
+		{
+			title: 'User Authentication',
+			text: 'Upon completion of the Joma website layout, Firebase was employed to establish user authentication, protecting the pages that required a logged-in user. Additional time was dedicated to ensuring the smooth handling of errors.',
+			icon: <IoLogoFirebase />,
+			position: 'right',
+			date: 'August 4th',
+		},
+		{
+			title: 'User Database',
+			text: "Firebase Realtime Database was utilized for the database handling of the Joma application. I utilized a useEffect hook to observe whether a user logs in to ensure each user holds their own database. Upon logging in, the user's account ID was passed into the database, creating and/or retrieving their database.",
+			icon: <IoLogoFirebase />,
+			date: 'August 5th',
+		},
+		{
+			title: 'Bug Testing',
+			text: "I spent several hours manually testing the Joma website for bugs on both mobile and full-screen renders. In addition, the project's code was optimized and shortened.",
+			icon: <IoLogoJavascript />,
+			position: 'right',
+			date: 'August 7th',
+		},
+		{
+			title: 'Future Implementations',
+			text: 'I plan to implement new technologies and features to the Joma application in the future.',
+			icon: <IoLogoJavascript />,
+			date: 'Current',
+			color: '#09BC8A',
+			animate: 'animate-bounce',
+		},
+	]
 
+	return (
+		<div className="max-w-[1400px] mx-auto">
+			<Navbar />
+			<div className="py-12">
+				<div className="grid gap-5 ">
+					<div className="headline text-white mx-auto text-center">
+						<h1 data-aos="fade" data-aos-duration="500" className="text-2xl mb-2 sm:text-3xl md:text-4xl font-light">
+							The Development of Joma
+						</h1>
+						<p data-aos="fade-right" data-aos-delay="500" data-aos-duration="500" className="font-light text-sm md:text-base">
+							Front row seats of the Joma's development.
+						</p>
+					</div>
+
+					<div>
 						<div>
-							<Timeline
-								title="UI/UX Design"
-								text="Began the development of the template that would be used for this web application. The tools used to create this was Figma. The theme and
-            						design was made from scratch."
-								icon={<FiFigma />}
-								date="August 1st"
-							/>
-							<Timeline
-								title="Project Environment"
-								text="
-								CSS Frameworks are here to make life easier. For the framework of this project ReactJS and Tailwind CSS was used
-								."
-								icon={<SiTailwindcss />}
-								position="right"
-								date="August 2nd"
-							/>
-							<Timeline
-								title="Frontend Development"
-								text=" For fullstack applications, I always start with the frontend first. For this period I mainly focused on creating the main pages of the
-								website, ensuring that they are mobile-friendly. Followed by this, the dashboard and the pages associated with it was created by scratch.
-					"
-								icon={<IoLogoReact />}
-								date="August 2nd"
-							/>
-							<Timeline
-								title="User Authentication"
-								text="Once the layout for Joma was created; I used Firebase to establish user authentication and protect the routes of pages that required the
-								user to be logged in. Additional time was spent to handle errors and make sure that everything running smoothly
-					"
-								icon={<IoLogoFirebase />}
-								position="right"
-								date="August 4th"
-							/>
-							<Timeline
-								title="User Database"
-								text="For the database handling of this application, Firebase Realtime Database was used. To ensure that each user holds their own database, I
-								utilized a useEffect hook that observes if the user logs in. Once they are logged in, I pass the user's account id into the database where
-								it creates and/or retrieve their database
-					"
-								icon={<IoLogoFirebase />}
-								date="August 5th"
-							/>
-							<Timeline
-								title="Bug Testing"
-								text="Optimized and shortend the project's code and in addition to this I spent several hours manually bug testing the website on both mobile and
-								full screen renders.
-					"
-								icon={<IoLogoJavascript />}
-								position="right"
-								date="August 7th"
-							/>
-							<Timeline
-								title="Future Implementations"
-								text="Looking to add more features and implement new technologies in the future."
-								icon={<IoLogoJavascript />}
-								date="Current"
-								color="#09BC8A"
-								animate="animate-bounce"
-							/>
+							{/* Use map to render a Timeline component for each object in timelineData */}
+							{timelineData.map((data, index) => (
+								<Timeline
+									key={index}
+									title={data.title}
+									text={data.text}
+									icon={data.icon}
+									date={data.date}
+									position={data.position}
+									color={data.color}
+									animate={data.animate}
+								/>
+							))}
 						</div>
 					</div>
 				</div>
 			</div>
-			<Footer />
 		</div>
 	)
 }

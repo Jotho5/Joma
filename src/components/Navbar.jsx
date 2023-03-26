@@ -41,7 +41,7 @@ const Navbar = () => {
 	})
 
 	const myStyling = {
-		list: 'p-4 mx-5 cursor-pointer hover:text-[#e6e6e6] font-medium ease-in-out duration-150 text-[#FFF]',
+		list: 'p-4 mx-5 cursor-pointer hover:text-[#e6e6e6] ease-in-out duration-150 text-[#FFF]',
 		mobileList: 'p-4  hover:animate-pulse font-medium text-xl text-[#FFF]',
 	}
 

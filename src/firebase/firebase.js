@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app'
-import { getAnalytics } from 'firebase/analytics'
+
 import { getFirestore } from 'firebase/firestore'
 import { getAuth } from 'firebase/auth'
 
@@ -10,13 +10,13 @@ import { getAuth } from 'firebase/auth'
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later., measurementId is optional
 const firebaseConfig = {
-	apiKey: process.env.REACT_APP_FIREBASE_API_TODO,
-	authDomain: process.env.REACT_APP_FIREBASE_DOMAIN_TODO,
-	projectId: process.env.REACT_APP_FIREBASE_PROJECT_TODO,
-	storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_TODO,
-	messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGE_TODO,
-	appId: process.env.REACT_APP_FIREBASE_APP_TODO,
-	measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_TODO,
+	apiKey: 'AIzaSyCYLi_ocAoeFG1iIPW5c0FMRDGDeJc_jVw',
+	authDomain: 'todo-list-6af7f.firebaseapp.com',
+	projectId: 'todo-list-6af7f',
+	storageBucket: 'todo-list-6af7f.appspot.com',
+	messagingSenderId: '367052555696',
+	appId: '1:367052555696:web:135d020943f2da261a4275',
+	measurementId: 'G-L0E5CJH655',
 }
 
 // Initialize Firebase

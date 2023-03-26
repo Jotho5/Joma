@@ -6,7 +6,6 @@ const Contact = () => {
 	return (
 		<div className="max-w-[1400px] mx-auto">
 			<Navbar />
-
 			<div className="px-8 mt-10 md:my-20">
 				<div className="grid gap-7 ">
 					<div className="headline text-white mx-auto text-center">

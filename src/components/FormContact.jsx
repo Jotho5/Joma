@@ -20,7 +20,7 @@ const FormContact = () => {
 	const sendEmail = (e) => {
 		e.preventDefault()
 
-		emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE, process.env.REACT_APP_EMAILJS_TEMPLATE, form.current, process.env.REACT_APP_EMAILJS_PUBLIC).then(
+		emailjs.sendForm('service_ymd197m', 'template_q27e8r9', form.current, 'b911J9F3ZHPXPkbWU').then(
 			(result) => {
 				console.log('Your message has been sent!')
 			},
@@ -34,7 +34,7 @@ const FormContact = () => {
 	}
 
 	return (
-		<div className="bg-[#45669b5d] border border-[#ffffff38] custom-radius sm:max-w-[700px] mx-auto">
+		<div className="bg-[#26365100] border border-[#ffffff38] custom-radius sm:max-w-[700px] mx-auto">
 			<form ref={form} data-aos="fade" data-aos-duration="800" data-aos-delay="600" className={style.form} onSubmit={sendEmail}>
 				<input name="name" disabled={formBox} data-aos="fade" className={`${style.input} `} placeholder="Full Name" type="text" required={true} />
 				<input name="email" disabled={formBox} data-aos="fade" className={`${style.input}`} placeholder="Email Address" type="email" required={true} />

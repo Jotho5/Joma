@@ -16,16 +16,16 @@ const landing = () => {
 						data-aos-duration="800"
 						data-aos-once="true"
 						data-aos-delay="1300"
-						className="custom-radius bg-[#3588F3] mx-auto w-[200px] flex justify-center place-items-center md:ml-[1px] "
+						className="custom-radius bg-[#3587f313] mx-auto w-[200px] flex justify-center place-items-center md:ml-[1px] "
 					>
-						<p className="text-[#f6f6fa] font-semibold px-1 py-1.5 text-center text-sm">No Credit Card Needed</p>
+						<p className="text-[#7bb4ff] px-1 py-1.5 text-center text-sm">Top Rated Application</p>
 					</div>
 
 					<div data-aos="fade-up-right" data-aos-duration="800" data-aos-once="true" className="flex flex-col gap-5 mx-auto text-center mb-4 md:text-left">
-						<h1 className="text-2xl text-[#ffffff] font-black sm:text-3xl md:text-5xl lg:text-6xl">The Daily Planner For The Busiest People</h1>
-						<p className="font-medium text-basemd:text-lg md:w-[80%] text-[#e9e8e8]">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Lorem ipsum dolor sit amet,
-							consectetur adipiscing elit.{' '}
+						<h1 className="text-[#ffffff] font-black sm:text-3xl md:text-5xl lg:text-6xl">The Daily Planner For The Busiest People</h1>
+						<p className=" text-basemd:text-lg md:w-[90%] text-[#ffffffb3]">
+							Not only does our Ultimate Task Tracking Daily Planner help you stay organized and on track, but it also includes helpful features that will boost
+							your productivity and help you achieve your goals.{' '}
 						</p>
 					</div>
 
@@ -39,7 +39,6 @@ const landing = () => {
 					<img src={HomeImage} alt="Illustration" />
 				</div>
 			</div>
-			<Footer />
 		</div>
 	)
 }
