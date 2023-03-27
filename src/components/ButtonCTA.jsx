@@ -4,8 +4,8 @@ const ButtonCTA = (props) => {
 	return (
 		<button
 			className={`${
-				props.color || ' bg-[#3588F3]'
-			} hover:bg-[#4070B5] px-10 py-3 custom-radius contact-btn-backdrop border border-[#fdfdfd50] text-[#f7f6f6] font-medium tracking-wide duration-150`}
+				props.color || ' bg-[#2862ac]'
+			} hover:bg-[#4070B5] px-10 py-3 rounded-md contact-btn-backdrop custom-radius border border-[#ffffff2b] text-[#f7f6f6] font-medium tracking-wide duration-150`}
 		>
 			Get Started
 		</button>

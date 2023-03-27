@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { UserAuth } from '../context/AuthContext'
 
 const LoginForm = () => {
-	const inputStyles = 'px-5 py-3.5 rounded-md border border-[#ffffff6b] bg-[#d9d9d94f] placeholder:text-[#FFFFFF] text-[#FFF] outline-0 text-sm'
+	const inputStyles = 'px-5 py-3.5 rounded-md border border-[#ffffff6b] bg-[#d9d9d94f] placeholder:text-[#ffffffbe] text-[#FFF] outline-0 text-sm'
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
 	const [error, setError] = useState('')
@@ -30,7 +30,7 @@ const LoginForm = () => {
 				<input className={`${inputStyles}`} type={'email'} placeholder={'Email Address'} required={true} onChange={(e) => setEmail(e.target.value)} />
 				<input className={`${inputStyles}`} type={'password'} placeholder={'Password'} required={true} onChange={(e) => setPassword(e.target.value)} />
 
-				<button className="py-3.5 bg-blue-500 text-[#FFF] border border-[#eeeeee33] rounded-md hover:bg-cyan-500 ease-in-out duration-500 ">Continue</button>
+				<button className="py-3.5 bg-blue-500 text-[#ffffff] border border-[#eeeeee33] rounded-md hover:bg-cyan-500 ease-in-out duration-500 ">Continue</button>
 			</form>
 		</div>
 	)

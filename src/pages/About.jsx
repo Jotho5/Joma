@@ -61,37 +61,42 @@ const about = () => {
 	]
 
 	return (
-		<div className="max-w-[1400px] mx-auto">
-			<Navbar />
-			<div className="py-12">
-				<div className="grid gap-5 ">
-					<div className="headline text-white mx-auto text-center">
-						<h1 data-aos="fade" data-aos-duration="500" className="text-2xl mb-2 sm:text-3xl md:text-4xl font-light">
-							The Development of Joma
-						</h1>
-						<p data-aos="fade-right" data-aos-delay="500" data-aos-duration="500" className="font-light text-sm md:text-base">
-							Front row seats of the Joma's development.
-						</p>
-					</div>
+		<div>
+			<div className="max-w-[1400px] mx-auto">
+				<Navbar />
+				<div className="py-12">
+					<div className="grid gap-5 ">
+						<div className="headline text-white mx-auto text-center">
+							<h1 data-aos="fade" data-aos-duration="500" className="text-2xl mb-2 sm:text-3xl md:text-4xl font-light">
+								The Development of Joma
+							</h1>
+							<p data-aos="fade-right" data-aos-delay="500" data-aos-duration="500" className="font-light text-sm md:text-base">
+								Front row seats of the Joma's development.
+							</p>
+						</div>
 
-					<div>
 						<div>
-							{/* Use map to render a Timeline component for each object in timelineData */}
-							{timelineData.map((data, index) => (
-								<Timeline
-									key={index}
-									title={data.title}
-									text={data.text}
-									icon={data.icon}
-									date={data.date}
-									position={data.position}
-									color={data.color}
-									animate={data.animate}
-								/>
-							))}
+							<div>
+								{/* Use map to render a Timeline component for each object in timelineData */}
+								{timelineData.map((data, index) => (
+									<Timeline
+										key={index}
+										title={data.title}
+										text={data.text}
+										icon={data.icon}
+										date={data.date}
+										position={data.position}
+										color={data.color}
+										animate={data.animate}
+									/>
+								))}
+							</div>
 						</div>
 					</div>
 				</div>
+			</div>
+			<div>
+				<Footer />
 			</div>
 		</div>
 	)

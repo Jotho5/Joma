@@ -6,7 +6,7 @@ const FormContact = () => {
 		input:
 			'p-3 bg-[#d9d9d90e] border border-[#ffffff5d] text-[#FFF] text-sm outline-none custom-radius focus:border-[#ffffffb9] duration-500 ease-in-out placeholder:text-white',
 		button:
-			'py-3 px-2 bg-[#345B92] hover:bg-[#4070B5] text-white border border-[#fdfdfd50] font-medium custom-radius contact-btn-backdrop max-w-[250px] duration-500',
+			'py-3 px-2 bg-[#4070B5] hover:bg-[#4070B5] text-white border border-[#fdfdfd50] font-medium custom-radius contact-btn-backdrop max-w-[250px] duration-500',
 		form: 'grid grid-cols-1 gap-5 p-5 sm:grid-cols-2 ',
 	}
 

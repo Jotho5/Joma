@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { UserAuth } from '../context/AuthContext'
 
 const RegisterForm = () => {
-	const inputStyles = 'px-5 py-3.5 rounded-md border border-[#ffffff6b] bg-[#d9d9d94f] placeholder:text-[#FFFFFF] text-[#FFF] outline-0 text-sm w-full'
+	const inputStyles = 'px-5 py-3.5 rounded-md border border-[#ffffff6b] bg-[#d9d9d94f] placeholder:text-[#ffffffbe] text-[#FFF] outline-0 text-sm w-full'
 	const [loading, setLoading] = useState(false)
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
