@@ -10,7 +10,7 @@ const Contact = () => {
 				<div className="px-8 mt-10 md:my-20">
 					<div className="grid gap-7 ">
 						<div className="headline text-white mx-auto text-center">
-							<h1 data-aos="fade" data-aos-duration="500" className="text-xl mb-2 sm:text-3xl md:text-4xl font-light">
+							<h1 data-aos="fade" data-aos-duration="500" className="text-xl mb-2 sm:text-3xl md:text-4xl font-medium">
 								Having Issues With Our Web App?
 							</h1>
 							<p data-aos="fade-right" data-aos-delay="500" data-aos-duration="500" className="font-light text-sm md:text-base">
