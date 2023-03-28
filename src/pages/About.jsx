@@ -64,9 +64,9 @@ const about = () => {
 		<div>
 			<div className="max-w-[1400px]  mx-auto">
 				<Navbar />
-				<div className="">
+				<div>
 					<div className="grid gap-5 ">
-						<div className="headline text-white mx-auto text-center">
+						<div className="headline text-white mx-auto text-center py-10">
 							<h1 data-aos="fade" data-aos-duration="500" className="text-2xl mb-2 sm:text-3xl md:text-4xl font-medium">
 								The Development of Joma
 							</h1>
