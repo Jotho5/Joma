@@ -62,9 +62,9 @@ const about = () => {
 
 	return (
 		<div>
-			<div className="max-w-[1400px] mx-auto">
+			<div className="max-w-[1400px]  mx-auto">
 				<Navbar />
-				<div className="py-12">
+				<div className="">
 					<div className="grid gap-5 ">
 						<div className="headline text-white mx-auto text-center">
 							<h1 data-aos="fade" data-aos-duration="500" className="text-2xl mb-2 sm:text-3xl md:text-4xl font-light">
