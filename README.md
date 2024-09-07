@@ -2,13 +2,6 @@
 
 Joma is a web-based application for all of your task tracking needs. With Joma, you have the ability of tracking your tasks, editing and removing them. Joma is equipped with a database and user authentication. Create an account and begin tracking today!
 
-# [Demo](https://jomatracker.netlify.app/) 🚀
-
-Check it out [here](https://jomatracker.netlify.app/)! In case you don't want to go through the process of creating an account, I have a test account available for you! 👇
-
-Username: John@Joma.com
-Password: Test123
-
 ## ✨ Features ✨
 
 - Track your personal/business tasks
